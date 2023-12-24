@@ -6,6 +6,7 @@ import HighlightText from '../components/core/HomePage/HighlightText'
 import CTAButton from "../components/core/HomePage/Button"
 import Banner from "../assets/Images/banner.mp4"
 import CodeBlocks from "../components/core/HomePage/CodeBlocks"
+import Footer from '../components/common/Footer'
 
 const Home = () => {
   return (
@@ -132,7 +133,7 @@ const Home = () => {
 
 
       {/*Footer */}
-
+      <Footer />
 
     </div>
   )
