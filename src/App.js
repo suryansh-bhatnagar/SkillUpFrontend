@@ -16,6 +16,8 @@ import MyCourses from "./components/core/Dashboard/MyCourses";
 import EditCourse from "./components/core/Dashboard/EditCourse";
 import Instructor from "./components/core/Dashboard/InstructorDashboard/Instructor";
 import Settings from "./components/core/Dashboard/Settings";
+import Cart from "./components/core/Dashboard/Cart";
+import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
 
 function App() {
 
@@ -70,6 +72,15 @@ function App() {
                 <Route path="dashboard/my-courses" element={<MyCourses />} />
                 <Route path="dashboard/edit-course/:courseId" element={<EditCourse />} />
 
+              </>
+            )
+          }
+
+          {
+            user?.accountType === ACCOUNT_TYPE.STUDENT && (
+              <>
+                <Route path="dashboard/cart" element={<Cart />} />
+                <Route path="dashboard/enrolled-courses" element={<EnrolledCourses />} />
               </>
             )
           }

@@ -37,7 +37,6 @@ export default function CourseInformationForm() {
       setLoading(true)
       const categories = await fetchCourseCategories()
       if (categories.length > 0) {
-        // console.log("categories", categories)
         setCourseCategories(categories)
       }
       setLoading(false)
@@ -120,7 +119,7 @@ export default function CourseInformationForm() {
           )
         }
         if (currentValues.courseImage !== course.thumbnail) {
-          formData.append("thumbnailImage", data.courseImage)
+          formData.append("thumbnail", data.courseImage)
         }
         // console.log("Edit Form data: ", formData)
         setLoading(true)
@@ -145,7 +144,7 @@ export default function CourseInformationForm() {
     formData.append("category", data.courseCategory)
     formData.append("status", COURSE_STATUS.DRAFT)
     formData.append("instructions", JSON.stringify(data.courseRequirements))
-    formData.append("thumbnailImage", data.courseImage)
+    formData.append("thumbnail", data.courseImage)
     setLoading(true)
     const result = await addCourseDetails(formData, token)
     if (result) {
