@@ -57,6 +57,8 @@ export default function CourseBuilderForm() {
         token
       )
     }
+
+    console.log('On submit section ', result);
     if (result) {
       // console.log("section result", result)
       dispatch(setCourse(result))
@@ -65,6 +67,7 @@ export default function CourseBuilderForm() {
     }
     setLoading(false)
   }
+  console.log('Course ',course);
 
   const cancelEdit = () => {
     setEditSectionName(null)

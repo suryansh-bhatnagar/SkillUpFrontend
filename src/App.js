@@ -18,6 +18,9 @@ import Instructor from "./components/core/Dashboard/InstructorDashboard/Instruct
 import Settings from "./components/core/Dashboard/Settings";
 import Cart from "./components/core/Dashboard/Cart";
 import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
+import Catalog from "./pages/Catalog";
+import CourseDetails from "./pages/CourseDetails";
+import VerifyEmail from "./pages/VerifyEmail";
 
 function App() {
 
@@ -28,6 +31,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="catalog/:catalogName" element={<Catalog />} />
+        <Route path="courses/:courseId" element={<CourseDetails />} />
         <Route
           path="signup"
           element={
@@ -49,6 +54,15 @@ function App() {
           element={
             <OpenRoute>
               <About />
+            </OpenRoute>
+          }
+        />
+
+        <Route
+          path="verify-email"
+          element={
+            <OpenRoute>
+              <VerifyEmail />
             </OpenRoute>
           }
         />

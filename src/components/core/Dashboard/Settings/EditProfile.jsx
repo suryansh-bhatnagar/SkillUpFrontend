@@ -35,9 +35,9 @@ export default function EditProfile() {
           <h2 className="text-lg font-semibold text-richblack-5">
             Profile Information
           </h2>
-          <div className="flex flex-col gap-5 lg:flex-row">
+          <div className="flex flex-col gap-5 lg:flex-row ">
             <div className="flex flex-col gap-2 lg:w-[48%]">
-              <label htmlFor="firstName" className="lable-style">
+              <label htmlFor="firstName" className="text-richblack-5 lable-style ">
                 First Name
               </label>
               <input
@@ -56,7 +56,7 @@ export default function EditProfile() {
               )}
             </div>
             <div className="flex flex-col gap-2 lg:w-[48%]">
-              <label htmlFor="lastName" className="lable-style">
+              <label htmlFor="lastName" className="text-richblack-5 lable-style">
                 Last Name
               </label>
               <input
@@ -78,7 +78,7 @@ export default function EditProfile() {
 
           <div className="flex flex-col gap-5 lg:flex-row">
             <div className="flex flex-col gap-2 lg:w-[48%]">
-              <label htmlFor="dateOfBirth" className="lable-style">
+              <label htmlFor="dateOfBirth" className="text-richblack-5 lable-style">
                 Date of Birth
               </label>
               <input
@@ -105,7 +105,7 @@ export default function EditProfile() {
               )}
             </div>
             <div className="flex flex-col gap-2 lg:w-[48%]">
-              <label htmlFor="gender" className="lable-style">
+              <label htmlFor="gender" className="text-richblack-5 lable-style">
                 Gender
               </label>
               <select
@@ -134,7 +134,7 @@ export default function EditProfile() {
 
           <div className="flex flex-col gap-5 lg:flex-row">
             <div className="flex flex-col gap-2 lg:w-[48%]">
-              <label htmlFor="contactNumber" className="lable-style">
+              <label htmlFor="contactNumber" className="text-richblack-5 lable-style">
                 Contact Number
               </label>
               <input
@@ -160,7 +160,7 @@ export default function EditProfile() {
               )}
             </div>
             <div className="flex flex-col gap-2 lg:w-[48%]">
-              <label htmlFor="about" className="lable-style">
+              <label htmlFor="about" className="text-richblack-5 lable-style">
                 About
               </label>
               <input
