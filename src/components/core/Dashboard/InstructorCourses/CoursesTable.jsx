@@ -126,7 +126,7 @@ export default function CoursesTable({ courses, setCourses }) {
                   >
                     <FiEdit2 size={20} />
                   </button>
-                  <button
+                  {/* <button
                     disabled={loading}
                     onClick={() => {
                       setConfirmationModal({
@@ -147,7 +147,7 @@ export default function CoursesTable({ courses, setCourses }) {
                     className="px-1 transition-all duration-200 hover:scale-110 hover:text-[#ff0000]"
                   >
                     <RiDeleteBin6Line size={20} />
-                  </button>
+                  </button> */}
                 </Td>
               </Tr>
             ))
