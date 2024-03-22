@@ -101,11 +101,7 @@ export function login(email, password, navigate) {
 
       toast.success("Login Successful")
       dispatch(setToken(response.data.token))
-      const userImage = response.data?.user?.image
-        ? response.data.user.image
-        : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName} ${response.data.user.lastName}`
-      dispatch(setUser({ ...response.data.user, image: userImage }))
-      
+      dispatch(setUser({ ...response.data.user, }))
       localStorage.setItem("token", JSON.stringify(response.data.token))
       localStorage.setItem("user", JSON.stringify(response.data.user))
       navigate("/dashboard/my-profile")
@@ -132,22 +128,22 @@ export function logout(navigate) {
 
 
 
-export function getPasswordResetToken(email , setEmailSent) {
-  return async(dispatch) => {
+export function getPasswordResetToken(email, setEmailSent) {
+  return async (dispatch) => {
     dispatch(setLoading(true));
-    try{
-      const response = await apiConnector("POST", RESETPASSTOKEN_API, {email,})
+    try {
+      const response = await apiConnector("POST", RESETPASSTOKEN_API, { email, })
 
       console.log("RESET PASSWORD TOKEN RESPONSE....", response);
 
-      if(!response.data.success) {
+      if (!response.data.success) {
         throw new Error(response.data.message);
       }
 
       toast.success("Reset Email Sent");
       setEmailSent(true);
     }
-    catch(error) {
+    catch (error) {
       console.log("RESET PASSWORD TOKEN Error", error);
       toast.error("Failed to send email for resetting password");
     }
@@ -156,21 +152,21 @@ export function getPasswordResetToken(email , setEmailSent) {
 }
 
 export function resetPassword(password, confirmPassword, token) {
-  return async(dispatch) => {
+  return async (dispatch) => {
     dispatch(setLoading(true));
-    try{
-      const response = await apiConnector("POST", RESETPASSWORD_API, {password, confirmPassword, token});
+    try {
+      const response = await apiConnector("POST", RESETPASSWORD_API, { password, confirmPassword, token });
 
       console.log("RESET Password RESPONSE ... ", response);
 
 
-      if(!response.data.success) {
+      if (!response.data.success) {
         throw new Error(response.data.message);
       }
 
       toast.success("Password has been reset successfully");
     }
-    catch(error) {
+    catch (error) {
       console.log("RESET PASSWORD TOKEN Error", error);
       toast.error("Unable to reset password");
     }
