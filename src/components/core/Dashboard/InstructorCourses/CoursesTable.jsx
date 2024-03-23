@@ -1,41 +1,37 @@
-import { useDispatch, useSelector } from "react-redux"
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table"
-
-import { setCourse, setEditCourse } from "../../../../slices/courseSlice"
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 import { useState } from "react"
 import { FaCheck } from "react-icons/fa"
 import { FiEdit2 } from "react-icons/fi"
 import { HiClock } from "react-icons/hi"
-import { RiDeleteBin6Line } from "react-icons/ri"
 import { useNavigate } from "react-router-dom"
 
 import { formatDate } from "../../../../services/formatDate"
-import {
-  deleteCourse,
-  fetchInstructorCourses,
-} from "../../../../services/operations/courseDetailsAPI"
+// import {
+//   deleteCourse,
+//   fetchInstructorCourses,
+// } from "../../../../services/operations/courseDetailsAPI"
 import { COURSE_STATUS } from "../../../../utils/constants"
 import ConfirmationModal from "../../../common/ConfirmationModal"
 
 export default function CoursesTable({ courses, setCourses }) {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   const navigate = useNavigate()
-  const { token } = useSelector((state) => state.auth)
-  const [loading, setLoading] = useState(false)
-  const [confirmationModal, setConfirmationModal] = useState(null)
+  // const { token } = useSelector((state) => state.auth)
+  const [loading] = useState(false)
+  const [confirmationModal] = useState(null)
   const TRUNCATE_LENGTH = 30
 
-  const handleCourseDelete = async (courseId) => {
-    setLoading(true)
-    await deleteCourse({ courseId: courseId }, token)
-    const result = await fetchInstructorCourses(token)
-    if (result) {
-      setCourses(result)
-    }
-    setConfirmationModal(null)
-    setLoading(false)
-  }
+  // const handleCourseDelete = async (courseId) => {
+  //   setLoading(true)
+  //   await deleteCourse({ courseId: courseId }, token)
+  //   const result = await fetchInstructorCourses(token)
+  //   if (result) {
+  //     setCourses(result)
+  //   }
+  //   setConfirmationModal(null)
+  //   setLoading(false)
+  // }
 
   // console.log("All Course ", courses)
 
