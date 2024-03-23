@@ -32,7 +32,7 @@ const timeline = [
 const TimelineSection = () => {
   return (
     <div>
-      <div className='flex flex-row gap-15 items-center'>
+      <div className='flex flex-col lg:flex-row gap-15 items-center'>
 
         <div className='w-[45%] flex flex-col gap-5'>
             {

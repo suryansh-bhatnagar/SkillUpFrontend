@@ -10,7 +10,7 @@ const CodeBlocks = ({
     <div className={`flex ${position} my-20 justify-between gap-10`}>
       
     {/*Section 1*/}
-    <div className='w-[50%] flex flex-col gap-8'>
+    <div className='w-full lg:w-[50%] flex flex-col gap-8'>
         {heading}
         <div className='text-richblack-300 font-bold '>
             {subheading}
