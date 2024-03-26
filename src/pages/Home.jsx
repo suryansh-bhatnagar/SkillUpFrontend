@@ -196,7 +196,7 @@ const Home = () => {
 
             <InstructorSection />
 
-            <h2 className='text-center text-4xl font-semobold mt-10'>review from Other Learners</h2>
+            <h2 className='text-center text-4xl font-semobold my-10'>Review from Other Learners</h2>
             {/* Review Slider here */}
             
       </div>
