@@ -21,6 +21,7 @@ import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
 import Catalog from "./pages/Catalog";
 import CourseDetails from "./pages/CourseDetails";
 import VerifyEmail from "./pages/VerifyEmail";
+import PurchasedCourses from "./components/core/Dashboard/PurchasedCourses";
 
 function App() {
 
@@ -93,14 +94,10 @@ function App() {
               <>
                 <Route path="dashboard/cart" element={<Cart />} />
                 <Route path="dashboard/enrolled-courses" element={<EnrolledCourses />} />
+                <Route path="dashboard/purchase-history" element={<PurchasedCourses />} />
               </>
             )
           }
-
-
-
-
-
 
         </Route>
       </Routes>
