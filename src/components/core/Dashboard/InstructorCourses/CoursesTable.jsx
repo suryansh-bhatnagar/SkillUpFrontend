@@ -49,9 +49,9 @@ export default function CoursesTable({ courses, setCourses }) {
             <Th className="text-left text-sm font-medium uppercase text-richblack-100">
               Price
             </Th>
-            <Th className="text-left text-sm font-medium uppercase text-richblack-100">
+            {/* <Th className="text-left text-sm font-medium uppercase text-richblack-100">
               Actions
-            </Th>
+            </Th> */}
           </Tr>
         </Thead>
         <Tbody>
@@ -112,7 +112,7 @@ export default function CoursesTable({ courses, setCourses }) {
                   ₹{course.price}
                 </Td>
                 <Td className="text-sm font-medium text-richblack-100 ">
-                  <button
+                  {/* <button
                     disabled={loading}
                     onClick={() => {
                       navigate(`/dashboard/edit-course/${course._id}`)
@@ -121,7 +121,7 @@ export default function CoursesTable({ courses, setCourses }) {
                     className="px-2 transition-all duration-200 hover:scale-110 hover:text-caribbeangreen-300"
                   >
                     <FiEdit2 size={20} />
-                  </button>
+                  </button> */}
                   {/* <button
                     disabled={loading}
                     onClick={() => {
