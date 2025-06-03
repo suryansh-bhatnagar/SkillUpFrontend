@@ -172,7 +172,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ SkillUp © 2023 </div>
+          <div className="text-center">Made with ❤️ SkillUp © 2025 </div>
         </div>
       </div>
     </div>
